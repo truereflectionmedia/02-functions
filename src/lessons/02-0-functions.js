@@ -83,11 +83,17 @@ const breadRecipe = function (numLoaves) {
 // the function should take a rest parameter named nums
 // the function should return the sum of all numbers passed in
 // call the function with 1, 2, 3, 4, 5
+const sumRest = function (...nums) {
+
+};
 
 // create a function named sumSpread
 // the function should take one parameter name nums that is an array
 // Use the spread operator to calculate the sum of all numbers in the array
 // It should use the sumRest function defined above
+const sumSpread = function (nums) {
+
+};
 
 /**
  * Task 7: Closure (idGenerator)
