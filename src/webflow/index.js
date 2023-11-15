@@ -1,5 +1,3 @@
-import { formatTime } from "http://127.0.0.1:5500/src/lessons/02-1-functions.js";
-
 // global variables
 let timerId = 0; // tracks the interval timer
 let startTime = 0; // tracks the start time of the timer
