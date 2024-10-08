@@ -53,7 +53,7 @@ let num = 100
 const halfOfFifty = halve(50)
 
 // create a variable named halfOfNum and set it to the return value of halve(num)
-const halfOfNum = halve(num)
+
 /**
  * Task 4: Complete the breadRecipe function
  * Objective: Understand nested functions and scopes
@@ -63,15 +63,7 @@ const halfOfNum = halve(num)
 function breadRecipe(numLoaves) {
   // Create a function named addIngredient
   // The function should take three parameters: amount, unit, ingredient
-  const addIngredient = (amount, unit, ingredient) => {
-    // Calculate total required ingredient amount based on the number of loaves
-    const ingredientAmount = amount * numLoaves;
-    if(ingredientAmount > 1) {
-      unit += "s" 
-    }
-    console.log(`${ingredientAmount} ${unit} ${ingredient}`)
-  }
-    
+  // Calculate total required ingredient amount based on the number of loaves
   // The function should log the ingredient amount and name
   // The function should modify the unit to plural if ingredientAmount is greater than 1
   // example: 1 cup flour
@@ -79,25 +71,16 @@ function breadRecipe(numLoaves) {
   // Add ingredients using the addIngredient function
   // the recipe for one loaf is: 2 cups flour,  2 cups water, 1 teaspoon salt, 0.5 teaspoon yeast
   // example. addIngredient(2, "cup", "flour");
-  addIngredient(2, "cup", "flour");
-  addIngredient(2, "cup", "water");
-  addIngredient(1, "teaspoon", "salt");
-  addIngredient(0.5, "teaspoon", "yeast");
-
 }
 
 // Call the breadRecipe function with 2 loaves
-breadRecipe(2);
+
 /**
  * Task 5: Optional Parameters
  *
  */
 
 // create a function named minus
-const minus = (num1, num2 = 0) => {
-  return num2 - num1;
-  
-}
 // the function should take two parameters: num1 and num2
 // the function should return num2 - num1
 // if num2 is not defined, set the default value to 0
@@ -110,26 +93,18 @@ const minus = (num1, num2 = 0) => {
  */
 
 // create a function named sumRest
-const sumRest = (...nums) => {
-let sum = 0
-for(let num of nums) {
-  // sum = sum + num
-  sum += num;
-}
-return sum
-};
-sumRest(1, 2, 3, 4, 5);
 // the function should take a rest parameter named nums
 // the function should return the sum of all numbers passed in
 // call the function with 1, 2, 3, 4, 5
+const sumRest = function (...nums) {
 
+};
 
 // create a function named sumSpread
 // the function should take one parameter name nums that is an array
 // Use the spread operator to calculate the sum of all numbers in the array
 // It should use the sumRest function defined above
 const sumSpread = function (nums) {
-return sumRest(...nums)
 
 };
 
@@ -142,26 +117,20 @@ return sumRest(...nums)
 // create a function named createIdGenerator
 function createIdGenerator() {
   // create a variable named id and set it to 0
-  let id = 0
   // return a function that increments id and returns the new value
-  return function() {
-    id++
-    return id  
-  }
-  
 }
 
 // create a variable named nextId and set it to the return value of createIdGenerator
-const nextId = createIdGenerator()
+
 // create a variable named id1 and set it to the return value of nextId
-let id1 = nextId();
-console.log(id1);
+let id1;
+
 // create a variable named id2 and set it to the return value of nextId
-let id2 = nextId();
-console.log(id2);
+let id2;
+
 // create a variable named id3 and set it to the return value of nextId
-let id3 = nextId();
-console.log(id3);
+let id3;
+
 /**
  * Task 8: Closure (createGreeter)
  *
@@ -171,19 +140,16 @@ console.log(id3);
 // create a function named createGreeter
 function createGreeter(name) {
   // return a function that logs "Hello, [name]!" to the console
-  return function() {
-    console.log(`Hello, ${name}!`)
-  }
 }
 
 // create a variable named greetJohn and set it to the return value of createGreeter with the name "John"
-const greetJohn = createGreeter("John")
+
 // create a variable named greetJane and set it to the return value of createGreeter with the name "Jane"
-const greetJane = createGreeter("Jane")
+
 // call greetJohn
-greetJohn();
+
 // call greetJane
-greetJane();
+
 /**
  * Task 9: Closure (countDown)
  *
@@ -196,9 +162,9 @@ greetJane();
 function createCountdown(start) {
   return function () {
     if (start > 0) {
-      return start--;
+      // Your code here
     } else {
-      return 0
+      // Your code here
     }
   };
 }
@@ -214,6 +180,6 @@ function power(base, exponent) {
   if (exponent == 0) {
     return 1;
   } else {
-    return base * power(base, exponent - 1)
+    // Your code here
   }
 }
